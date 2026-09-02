@@ -1,2 +1,4 @@
 # T212-Super
-Working on a T212-API related project.
+This project was made to improve my skills.
+
+AI was only used for debugging.
