@@ -1,6 +1,7 @@
 from dotenv import load_dotenv
 import os
 import requests
+from datetime import datetime
 
 from .endpoints import Endpoints
 from .account import Account
@@ -33,7 +34,8 @@ class Client:
     def get(self, endpoint, **kwargs):
         response = self.session.get(endpoint, **kwargs)
         response.raise_for_status()
-
+        currentTime = datetime.now().strftime("%H:%M:%S")
+        print(f"Data retrieved at {currentTime}")
         return response.json()
     
     def post(self, endpoint, **kwargs):
